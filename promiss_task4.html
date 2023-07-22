@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let no1,no2,no;
+        no1 = parseInt(prompt("enter no1:"));
+        no2 = parseInt(prompt("enter  no2:"));
+        function number(no){
+            return new Promise((resovle,reject)=>{
+                console.log("feching condition pliz wiet");
+
+
+                setTimeout(() => {
+                    if(no1>no2)
+                    {
+                        resovle("no1 is max");
+                    }
+                    else if(no1<no2)
+                    {
+                        reject("no2 is max");
+                    }
+                    else{
+                        console.log("both are eqval");
+                    }
+
+
+
+
+
+                    
+                }, 3000);
+
+            })
+
+        }
+        let x = (result)=>{
+            console.log(result);
+
+        }
+        let z = (error)=>{
+            console.log(error);
+
+        }
+        number(no).then(x).catch(z);
+
+
+
+
+    </script>
+    
+</body>
+</html>
